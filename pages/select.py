@@ -24,16 +24,18 @@ st.subheader("📖 Contexto", anchor=False)
 
 st.write("Para ilustrar o exemplo apresentado, considere a seguinte tabela:")
 
-st.write("Tabela **Alunos**")
+st.write("Tabela **Clientes**")
 
 st.markdown("""
-| **RA** |  **Nome** | **Idade** |
-|:------:|:---------:|-----------|
-|   1    |   Maria   |     25    |
-|   2    |    José   |     30    |
-|   3    |    Ana    |     27    |
-|   4    |    João   |     23    |
-|   5    | Francisco |     25    |
+| **id** |    **nome**    | **fone**    | **cidade**     | **estado** | **lim_cred** | **status** |
+|:------:|:--------------:|-------------|----------------|------------|--------------|------------|
+|    1   |   João Silva   | 11987654321 |    São Paulo   |     SP     |         8500 |      1     |
+|    2   | Maria Oliveira | 21976543210 | Rio de Janeiro |     RJ     |         3500 |      1     |
+|    3   |  Carlos Souza  | 31965432109 | Belo Horizonte |     MG     |         1400 |      1     |
+|    4   |   Ana Pereira  | 41954321098 |    Curitiba    |     PR     |         2000 |      0     |
+|    5   |  Pedro Santos  | 51943210987 |  Porto Alegre  |     RS     |         6500 |      1     |
+|    6   | Lucia Ferreira | 11932109876 |    Campinas    |     SP     |         4750 |      1     |
+|    7   |  Rafael Costa  | 21921098765 |     Niterói    |     RJ     |         8500 |      0     |
 """)
 
 st.text("")
@@ -41,18 +43,25 @@ st.text("")
 st.write("🗂️ **Script SQL** para criação do ambiente:")
 
 code = '''
-CREATE TABLE Alunos (
-  ra      INT,
-  nome    CHAR(30),
-  idade   INT
-)
+CREATE TABLE Clientes (
+  id		INT,
+  nome		CHAR(50),
+  fone		CHAR(11),			-- Formato: "11912345678"
+  cidade	CHAR(50),
+  estado	CHAR(2),			-- Sigla (ex: "SP")
+  lim_cred	NUMERIC,
+  status 	BOOLEAN				-- Ativo = 1 | Inativo = 0
+);
 
-INSERT INTO Alunos VALUES
-  (1, "Maria", 25),
-  (2, "José", 30),
-  (3, "Ana", 27),
-  (4, "João", 23),
-  (5, "Francisco", 25)
+-- Inserindo 7 clientes fictícios
+INSERT INTO Clientes (id, nome, fone, cidade, estado, lim_cred, status) VALUES
+  (1, 'João Silva', '11987654321', 'São Paulo', 'SP', 8500.00, 1),
+  (2, 'Maria Oliveira', '21976543210', 'Rio de Janeiro', 'RJ', 3500.00, 1),
+  (3, 'Carlos Souza', '31965432109', 'Belo Horizonte', 'MG', 1400.00, 1),
+  (4, 'Ana Pereira', '41954321098', 'Curitiba', 'PR', 2000.00, 0),
+  (5, 'Pedro Santos', '51943210987', 'Porto Alegre', 'RS', 6500.00, 1),
+  (6, 'Lucia Ferreira', '11932109876', 'Campinas', 'SP', 4750.00, 1),
+  (7, 'Rafael Costa', '21921098765', 'Niterói', 'RJ', 8500.00, 0);
 '''
 st.code(code, language="sql")
 
@@ -63,24 +72,26 @@ st.subheader("💡 Exemplo 1:")
 
 code = '''
 SELECT *
-FROM Alunos;
+FROM Clientes;
 '''
 st.code(code, language="sql")
 
 st.write("🎯 **Resultado:**")
 
 st.markdown("""
-| **ra** |  **nome** | **idade** |
-|:------:|:---------:|-----------|
-|   1    |   Maria   |     25    |
-|   2    |    José   |     30    |
-|   3    |    Ana    |     27    |
-|   4    |    João   |     23    |
-|   5    | Francisco |     25    |
+| **id** |    **nome**    | **fone**    | **cidade**     | **estado** | **lim_cred** | **status** |
+|:------:|:--------------:|-------------|----------------|------------|--------------|------------|
+|    1   |   João Silva   | 11987654321 |    São Paulo   |     SP     |         8500 |      1     |
+|    2   | Maria Oliveira | 21976543210 | Rio de Janeiro |     RJ     |         3500 |      1     |
+|    3   |  Carlos Souza  | 31965432109 | Belo Horizonte |     MG     |         1400 |      1     |
+|    4   |   Ana Pereira  | 41954321098 |    Curitiba    |     PR     |         2000 |      0     |
+|    5   |  Pedro Santos  | 51943210987 |  Porto Alegre  |     RS     |         6500 |      1     |
+|    6   | Lucia Ferreira | 11932109876 |    Campinas    |     SP     |         4750 |      1     |
+|    7   |  Rafael Costa  | 21921098765 |     Niterói    |     RJ     |         8500 |      0     |
 """)
 
 
-st.write("📝 Retorna todos os dados da tabela Alunos, exibindo todas as **colunas** e **linhas**.")
+st.write("📝 Retorna todos os dados da tabela Clientes, exibindo todas as **colunas** e **linhas**.")
 
 st.divider()
 
@@ -99,21 +110,23 @@ st.divider()
 st.subheader("💡 Exemplo 2:")
 
 code = '''
-SELECT nome, idade
-FROM Alunos;
+SELECT nome, cidade
+FROM Clientes;
 '''
 st.code(code, language="sql")
 
 st.write("🎯 **Resultado:**")
 
 st.markdown("""
-|  **nome** | **idade** |
-|:---------:|-----------|
-|   Maria   |     25    |
-|    José   |     30    |
-|    Ana    |     27    |
-|    João   |     23    |
-| Francisco |     25    |
+|    **nome**    | **cidade**     |
+|:--------------:|----------------|
+|   João Silva   |    São Paulo   |
+| Maria Oliveira | Rio de Janeiro |
+|  Carlos Souza  | Belo Horizonte |
+|   Ana Pereira  |    Curitiba    |
+|  Pedro Santos  |  Porto Alegre  |
+| Lucia Ferreira |    Campinas    |
+|  Rafael Costa  |     Niterói    |
 """)
 
-st.write("📝 Retorna apenas as colunas **nome** e **idade** da tabela **Alunos**, exibindo os dados dessas colunas para todos os registros.")
+st.write("📝 Retorna apenas as colunas **nome** e **idade** da tabela **Clientes**, exibindo os dados dessas colunas para todos os registros.")
