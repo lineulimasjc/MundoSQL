@@ -1,6 +1,6 @@
 import streamlit as st
 
-st.image("img/select.png", width=250)
+st.image("img/select2.png")
 
 st.title("📌 SELECT", anchor=False)
 

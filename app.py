@@ -10,7 +10,7 @@ st.set_page_config(
 pgs = {
     "Linguagem SQL": [
         st.Page("pages/home.py", title="Home", icon="🏡"), #house_with_garden
-        st.Page("pages/select.py", title="SELECT", icon="📝"), #pencil
+        st.Page("pages/select.py", title="SELECT", icon="🔍"),
         #st.Page("pages/saida_de_dados.py", title="Saída de Dados", icon="📊"), #bar_chart
         #st.Page("pages/variaveis.py", title="Variáveis", icon="🗄️"), #file_cabinet
         #st.Page("pages/entrada_de_dados.py", title="Entrada de Dados", icon="⌨️"), #keyboard
