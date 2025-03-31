@@ -8,7 +8,7 @@ st.write("O comando ```SELECT ... FROM ...``` no SQL é usado para consultar dad
 
 st.write("Duas palavras-chave são essenciais: ```SELECT``` (selecionar) e ```FROM``` (de), indicando quais **colunas** desejamos recuperar e de qual **tabela**.")
 
-st.write("Sintaxe básica:")
+st.write("Sintaxe:")
 
 code = '''
 SELECT coluna1, coluna2, colunaN
