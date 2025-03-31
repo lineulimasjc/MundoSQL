@@ -1,6 +1,8 @@
 import streamlit as st
 
-st.title('🌍 Bem-vindo ao **Mundo SQL**!')
+st.image("img/home.png")
+
+st.title('Bem-vindo ao **Mundo SQL**!')
 
 st.subheader("Portal Sobre Banco de Dados e Linguagem SQL")
 

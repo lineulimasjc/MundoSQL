@@ -68,7 +68,7 @@ st.code(code, language="sql")
 
 st.divider()
 
-st.subheader("💡 Exemplo 1:")
+st.subheader("💡 Exemplo 1:", anchor=False)
 
 code = '''
 SELECT *
@@ -107,7 +107,7 @@ st.write("Então, na prática, dizer que **linha = registro = tupla** está corr
 
 st.divider()
 
-st.subheader("💡 Exemplo 2:")
+st.subheader("💡 Exemplo 2:", anchor=False)
 
 code = '''
 SELECT nome, cidade
@@ -130,3 +130,13 @@ st.markdown("""
 """)
 
 st.write("📝 Retorna apenas as colunas **nome** e **cidade** da tabela **Clientes**, exibindo os dados dessas colunas para todos os registros.")
+
+
+
+
+code = '''
+SELECT DISTINCT(estado)
+FROM Clientes;
+'''
+st.code(code, language="sql")
+
