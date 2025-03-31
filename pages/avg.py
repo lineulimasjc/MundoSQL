@@ -37,7 +37,7 @@ st.write("🎯 **Resultado:**")
 st.markdown("""
 | **AVG(lim_cred)** |
 |-------------------|
-|       1400        |
+| 5021.42857142857  |
 """)
 
 st.write("📝 O comando ```AVG``` calcula a **média** dos valores em uma coluna numérica.")

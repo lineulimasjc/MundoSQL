@@ -16,7 +16,7 @@ pgs = {
         st.Page("pages/max.py", title="MAX", icon="🥇"),
         st.Page("pages/min.py", title="MIN", icon="🔻"),
         st.Page("pages/avg.py", title="AVG", icon="⚖️"),
-
+        st.Page("pages/round.py", title="ROUND", icon="⭕"),
     ],
     # "C++ Orientado a Objetos": [
     #      st.Page("pages/example_three.py", title="Learn about us"),
