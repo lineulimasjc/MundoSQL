@@ -1,6 +1,6 @@
 import streamlit as st
 
-# st.image("img/select2.png")
+# st.image("img/file.png")
 
 st.title("📌 DISTINCT", anchor=False)
 

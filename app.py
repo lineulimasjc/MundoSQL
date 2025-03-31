@@ -9,18 +9,14 @@ st.set_page_config(
 
 pgs = {
     "Linguagem SQL": [
-        st.Page("pages/home.py", title="Home", icon="🏡"), #house_with_garden
+        st.Page("pages/home.py", title="Home", icon="🏡"),
         st.Page("pages/select.py", title="SELECT", icon="🔍"),
         st.Page("pages/distinct.py", title="DISTINCT", icon="💎"),
-        #st.Page("pages/saida_de_dados.py", title="Saída de Dados", icon="📊"), #bar_chart
-        #st.Page("pages/variaveis.py", title="Variáveis", icon="🗄️"), #file_cabinet
-        #st.Page("pages/entrada_de_dados.py", title="Entrada de Dados", icon="⌨️"), #keyboard
-        #st.Page("pages/estrutura_de_decisao.py", title="Estrutura de Decisão", icon="❓"), #question
-        #st.Page("pages/laco_de_repeticao.py", title="Laço de Repetição", icon="🔁"), #repeat
-        #st.Page("pages/funcao.py", title="Função", icon="⚙️"), #gear
-        #st.Page("pages/vetor.py", title="Vetor", icon="📏"), #straight_ruler
-        #st.Page("pages/matriz.py", title="Matriz", icon="📋"), #clipboard
-        #st.Page("pages/registro.py", title="Registro", icon="📦"), #package
+        st.Page("pages/count.py", title="COUNT", icon="🔢"),
+        st.Page("pages/max.py", title="MAX", icon="🥇"),
+        st.Page("pages/min.py", title="MIN", icon="🔻"),
+        st.Page("pages/avg.py", title="AVG", icon="⚖️"),
+
     ],
     # "C++ Orientado a Objetos": [
     #      st.Page("pages/example_three.py", title="Learn about us"),
