@@ -129,4 +129,4 @@ st.markdown("""
 |  Rafael Costa  |     Niterói    |
 """)
 
-st.write("📝 Retorna apenas as colunas **nome** e **idade** da tabela **Clientes**, exibindo os dados dessas colunas para todos os registros.")
+st.write("📝 Retorna apenas as colunas **nome** e **cidade** da tabela **Clientes**, exibindo os dados dessas colunas para todos os registros.")
