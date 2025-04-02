@@ -19,6 +19,7 @@ pgs = {
         st.Page("pages/avg.py", title="AVG", icon="⚖️"),
         st.Page("pages/round.py", title="ROUND", icon="⭕"),
         st.Page("pages/where.py", title="WHERE", icon="🔍"),
+        st.Page("pages/case_when.py", title="CASE...WHEN", icon="🔀"),
     ],
     # "C++ Orientado a Objetos": [
     #      st.Page("pages/example_three.py", title="Learn about us"),

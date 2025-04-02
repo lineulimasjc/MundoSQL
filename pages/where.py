@@ -76,7 +76,7 @@ st.subheader("💡 Exemplo 2:", anchor=False)
 code = '''
 SELECT *
 FROM Clientes
-WHERE lim_cred = 3500;
+WHERE lim_cred >= 5000;
 '''
 st.code(code, language="sql")
 
@@ -85,7 +85,9 @@ st.write("🎯 **Resultado:**")
 st.markdown("""
 | **id** |    **nome**    | **fone**    | **cidade**     | **estado** | **lim_cred** | **status** |
 |:------:|:--------------:|-------------|----------------|------------|--------------|------------|
-|    2   | Maria Oliveira | 21976543210 | Rio de Janeiro |     RJ     |         3500 |      1     |
+|    1   |   João Silva   | 11987654321 |    São Paulo   |     SP     |         8500 |      1     |
+|    5   |  Pedro Santos  | 51943210987 |  Porto Alegre  |     RS     |         6500 |      1     |
+|    7   |  Rafael Costa  | 21921098765 |     Niterói    |     RJ     |         8500 |      0     |
 """)
 
-st.write("📝 Essa consulta retorna todas as informações de clientes que têm um **limite de crédito** exatamente **igual a 3500**.")
+st.write("📝 Essa consulta retorna todos os dados da tabela **Clientes**, filtrando apenas os registros onde o **limite de crédito** é **maior ou igual a 5000**.")
