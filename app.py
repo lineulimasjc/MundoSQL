@@ -20,6 +20,7 @@ pgs = {
         st.Page("pages/round.py", title="ROUND", icon="⭕"),
         st.Page("pages/where.py", title="WHERE", icon="🔍"),
         st.Page("pages/orderby.py", title="ORDER BY", icon="⬆️"),
+        #st.Page("pages/cast.py", title="CAST", icon="🗃️"),
         #st.Page("pages/in.py", title="IN", icon="🗃️"),
         #st.Page("pages/between.py", title="BETWEEN", icon="↔️"),
         st.Page("pages/case_when.py", title="CASE...WHEN", icon="🔀"),
