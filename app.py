@@ -24,6 +24,8 @@ pgs = {
         #st.Page("pages/in.py", title="IN", icon="🗃️"),
         #st.Page("pages/between.py", title="BETWEEN", icon="↔️"),
         st.Page("pages/case_when.py", title="CASE...WHEN", icon="🔀"),
+        st.Page("pages/pk.py", title="PRIMARY KEY", icon="🔑"),
+        #st.Page("pages/fk.py", title="FOREIGN KEY", icon="↔🔗"),
     ],
     # "C++ Orientado a Objetos": [
     #      st.Page("pages/example_three.py", title="Learn about us"),
