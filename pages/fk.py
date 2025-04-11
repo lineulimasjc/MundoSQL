@@ -18,33 +18,6 @@ st.write("###")
 
 
 
-st.write("**Diagrama de Tabelas: `Clientes` e `Telefones`:**")
-
-st.write("**Tabela `Clientes`:**")
-
-st.markdown("""
-| 🔑 **id_cliente** (PK) | **nome** CHAR(50) | **email** CHAR(100)  |
-|:---------------------:|-------------------|----------------------|
-| 1                     | João Silva        | joao@email.com       |
-| 2                     | Maria Souza       | maria@email.com      |
-""")
-
-st.write("**Tabela `Telefones`:**")
-
-st.markdown("""
-| 🔑 **id_telefone** (PK) | 🔗 **id_cliente** (FK) → `Clientes` | **numero** CHAR(15)  |
-|:-----------------------:|:--------------------------------:|----------------------|
-| 101                     | 1                                | (11) 9999-8888       |
-| 102                     | 1                                | (11) 7777-5555       |
-| 103                     | 2                                | (21) 3333-4444       |
-""")
-
-
-
-st.write("###")
-
-
-
 st.write("**Estrutura das Tabelas ```Clientes``` e ```Telefones```:**")
 
 # st.image("img/pk_tabela.png")
@@ -61,7 +34,7 @@ CREATE TABLE Clientes (
 CREATE TABLE Telefones (
     id_telefone     INT         PRIMARY KEY,
     id_cliente      INT,
-    numero          CHAR(15)    NOT NULL,
+    numero          CHAR(11)    NOT NULL,
     FOREIGN KEY (id_cliente) REFERENCES Clientes (id_cliente)
 );
 '''
@@ -89,13 +62,40 @@ st.write("**Inserindo Dados de Exemplo:**")
 code = '''
 -- Inserindo dados na tabela Clientes
 INSERT INTO Clientes (id_cliente, nome, email) VALUES
-(1, 'Ana Oliveira', 'ana@email.com'),
-(2, 'Pedro Souza', 'pedro@email.com');
+(1, 'João Silva', 'joao@email.com'),
+(2, 'Maria Souza', 'maria@email.com');
 
 -- Inserindo dados na tabela Telefones
 INSERT INTO Telefones (id_telefone, id_cliente, numero) VALUES
-(1, 1, '(11) 99999-1111'),
-(2, 1, '(11) 98888-2222'),
-(3, 2, '(21) 97777-3333');
+(1, 1, '11999991111'),
+(2, 1, '11988882222'),
+(3, 2, '21977773333');
 '''
 st.code(code, language="sql")
+
+
+
+st.write("###")
+
+
+
+st.write("**Diagrama de Tabelas: `Clientes` e `Telefones`:**")
+
+st.write("**Tabela `Clientes`:**")
+
+st.markdown("""
+| 🔑 **id_cliente** (PK) | **nome** CHAR(50) | **email** CHAR(100)  |
+|:---------------------:|-------------------|----------------------|
+| 1                     | João Silva        | joao@email.com       |
+| 2                     | Maria Souza       | maria@email.com      |
+""")
+
+st.write("**Tabela `Telefones`:**")
+
+st.markdown("""
+| 🔑 **id_telefone** (PK) | 🔗 **id_cliente** (FK) → `Clientes` | **numero** CHAR(11)  |
+|:-----------------------:|:--------------------------------:|----------------------|
+| 1                       | 1                                | 11999991111          |
+| 2                       | 1                                | 11988882222          |
+| 3                       | 2                                | 21977773333          |
+""")
