@@ -2,7 +2,7 @@ import streamlit as st
 
 st.title("📌 PRIMARY KEY", anchor=False)
 
-st.write("Uma **chave primária** (ou *primary key*) em um banco de dados é um campo (ou conjunto de campos) que identifica de forma **única** cada registro em uma tabela. Ela **não pode ter valores repetidos** nem **valores nulos**.")
+st.write("Uma **chave primária** (*primary key*) em um banco de dados é um campo (ou conjunto de campos) que identifica de forma **única** cada registro em uma tabela. Ela **não pode ter valores repetidos** nem **valores nulos**.")
 
 st.subheader("💡 Exemplo:", anchor=False)
 
